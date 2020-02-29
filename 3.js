@@ -3,24 +3,18 @@ function Sequence(n){
         console.log("Parameter harus bilangan positif")
     }
     else{
-        let foo = [];
-        foo.push(n);
-        for(let i = 0; i < 9; i++){
-            let num = foo[i];
-        let a = num % 2;
-        if(a == 0){
-            let b = num / 2;
-            foo.push(b);
+        let foo = [n];
+        let i = n;
+        while(n > 1){
+            n = n%2 > 0 ? n*3+1 : n/2;
+            foo.push(n);
         }
-        if(a != 0){
-            let c = 3*num+1;
-            foo.push(c);
-        }
-        }
-        console.log(foo);
+            console.log("array :",foo);
+            console.log("count :", foo.length);
     }
 }
-    Sequence(13);
-    Sequence(3);
-    Sequence(-9);
+
+Sequence(13);
+Sequence(3);
+Sequence(-9);
     
