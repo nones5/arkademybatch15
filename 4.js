@@ -31,6 +31,8 @@ function randomize(num){
         arr[newPos] = temp;
     }
     arr.length = num;
+    sum = arr.reduce(function (a, b) {return a + b;}, 0);
     console.log(arr);
+    console.log(sum);
 }
 randomize(5);
