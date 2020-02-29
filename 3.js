@@ -4,7 +4,6 @@ function Sequence(n){
     }
     else{
         let foo = [n];
-        let i = n;
         while(n > 1){
             n = n%2 > 0 ? n*3+1 : n/2;
             foo.push(n);
