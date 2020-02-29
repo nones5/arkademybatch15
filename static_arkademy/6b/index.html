@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Arkademy Canteen</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded">
+        <a class="navbar-brand" href="#">
+            <img src="logo_arkademy.svg" width="80" height="30" alt="">
+        </a>
+        <div class="col-md-12">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" style="width: 80%;" type="search" placeholder="Search ..."
+                    aria-label="Search">
+                <a href="#add" class="btn btn-warning text-white" style="width: 8%;" data-toggle="modal"
+                    type="submit">ADD</a>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <table class="table table-borderless shadow p-3 mb-5 bg-white" style="border-radius: 25px;">
+            <thead class="bg-warning text-white">
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Cashier</th>
+                    <th scope="col">Produuct</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Pevita Pearce</td>
+                    <td>Latte</td>
+                    <td>Drink</td>
+                    <td>
+                        <a href="#edit" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#delete" class="delete" data-toggle="modal"><i class="fa fa-trash-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Raisa Andriana</td>
+                    <td>Cake</td>
+                    <td>Food</td>
+                    <td>
+                        <a href="#edit" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#delete" class="delete" data-toggle="modal"><i class="fa fa-trash-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Raisa Andriana</td>
+                    <td>Fried Rice</td>
+                    <td>Food</td>
+                    <td>
+                        <a href="#edit" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#delete" class="delete" data-toggle="modal"><i class="fa fa-trash-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Pevita Pearce</td>
+                    <td>Gudeg</td>
+                    <td>Food</td>
+                    <td>
+                        <a href="#edit" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#delete" class="delete" data-toggle="modal"><i class="fa fa-trash-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Joko Purwadhi</td>
+                    <td>Ice Tea</td>
+                    <td>Drink</td>
+                    <td>
+                        <a href="#edit" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#delete" class="delete" data-toggle="modal"><i class="fa fa-trash-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Amir Makmur</td>
+                    <td>Pisang Keju</td>
+                    <td>Food</td>
+                    <td>
+                        <a href="#edit" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#delete" class="delete" data-toggle="modal"><i class="fa fa-trash-o"
+                                style="font-size:24px;color:#42f593;" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="edit" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">EDIT</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border: hidden; border-bottom-style:groove;"
+                                placeholder="Raisa Andriana">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border: hidden; border-bottom-style:groove;"
+                                placeholder="Drink">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border: hidden; border-bottom-style:groove;"
+                                placeholder="Ice Tea">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border: hidden; border-bottom-style:groove;"
+                                placeholder="Rp.10.000">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-warning text-white" value="EDIT">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="add" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">ADD</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group"> <input type="text" class="form-control" style="border: hidden; border-bottom-style:groove;" placeholder="Raisa Andriana">
+                        </div>
+                        <div class="form-group"> <input type="text" class="form-control" style="border: hidden; border-bottom-style:groove;" placeholder="Drink"></div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border: hidden; border-bottom-style:groove;" placeholder="Ice Tea"></div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border: hidden; border-bottom-style:groove;" placeholder="Rp.10.000"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-warning text-white" value="ADD">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="delete" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="delete.PNG" alt="" class="img-center">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
