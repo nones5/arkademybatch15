@@ -1,15 +1,15 @@
 'use strict';
 
 function triangle(size) {
-    var arr = [''];
-    for (var i = 0; i < size; i++) {
+    let arr = [''];
+    for (let i = 0; i < size; i++) {
         arr[i] = '';
-        for (var j = 0; j < i + 1; j++) {
+        for (let j = 0; j < i + 1; j++) {
             arr[i] += "*";
         }
         arr[i] = arr[i].split('').join(' ');
-        var step = size + size - 1 - arr[i].length;
-        for (var k = 0; k < step; k++) {
+        let step = size + size - 1 - arr[i].length;
+        for (let k = 0; k < step; k++) {
             arr[i] = ' ' + arr[i];
         }
     }
